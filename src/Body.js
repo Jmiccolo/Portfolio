@@ -8,7 +8,7 @@ const Body = () => {
         <div className="body">
             <About/>
             <Projects/>
-            <Contact />  
+            <Contact/>  
         </div>
     );
 };
