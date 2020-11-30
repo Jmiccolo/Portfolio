@@ -22,7 +22,7 @@ const Projects = () => {
             Description:"An application built to ease users into the creation and playing of a DND character with options for the Dungeon Master to build a campaign. Includes dice rollers, stat automation, as well as a playable mode where users can easily roll traits, attacks, and damage",
             Website:"https://dndforyouandme.herokuapp.com/",
             Github:"https://github.com/Jmiccolo/DnDForYouAndMe",
-            Image:"/screen-recorder-fri-nov-13-2020-13-18-07.gif",
+            Video:"/DNDFYAM.mp4",
             Languages: ["html5", "css3-alt", "js", "node-js"]
         },
         {
@@ -30,7 +30,7 @@ const Projects = () => {
             Description:"Using <a href='https://github.com/annthurium' target='__blank'>annthurium's</a> Affirmation API to create a small application to remind yourself of the good work you have done and that you are good enough",
             Website:"https://miccolo-daily-affirmations.herokuapp.com/",
             Github:"https://github.com/Jmiccolo/DailyAffirmations",
-            Image:"/DailyAffirmations.gif",
+            Video:"/DailyAffirmations.mp4",
             Languages: ["html5", "css3-alt", "js", "node-js"]
         },
     ]
@@ -42,7 +42,7 @@ const Projects = () => {
         return(
         <div className="projectblock" key={index}>
             <h3>{val.Title}</h3>
-            <img src={val.Image} alt={val.Title}/>
+            <video src={val.Video} alt={val.Title} controls autoplay/>
             <div>
                 {langspans}  
             </div>
