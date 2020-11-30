@@ -32,7 +32,7 @@ const App = () => {
   return (
       <div className="container">
       <div id="container">
-        <svg width="500" height="55">
+        <svg viewBox="0 0 500 70">
           <path d="M 40 5 L 40 5 L 40 35 L 20 35 L 20 25" strokeDashoffset="60" strokeDasharray="60" className="letter" />
           <path d="M 60 5 L 60 5 L 80 5 L 80 35 L 60 35 L 60 5" strokeDashoffset="100" strokeDasharray="100" className="letter" />
           <path d="M 120 5 L 120 5 L 100 5 L 100 20 L 120 20 L 120 35 L 100 35" strokeDashoffset="90" strokeDasharray="90" className="letter" />
@@ -50,9 +50,9 @@ const App = () => {
         <h1 className={hide} id="title">WEB DEVELOPER</h1>
       {main}
       <div className="socials">
-        <a href="https://twitter.com/JoshMiccolo" target="_blank" className="fa fa-twitter fa-2x"></a>
-        <a href="https://github.com/Jmiccolo" target="_blank" className="fa fa-github fa-2x"></a>
-        <a href="https://www.facebook.com/josh.miccolo" target="_blank" className="fa fa-facebook fa-2x"></a>
+        <a href="https://twitter.com/JoshMiccolo" target="_blank" rel="noopener noreferrer" className="fab fa-twitter fa-2x"></a>
+        <a href="https://github.com/Jmiccolo" target="_blank" rel="noopener noreferrer" className="fab fa-github fa-2x"></a>
+        <a href="https://www.linkedin.com/in/josh-miccolo-513b2521/" target="_blank" rel="noopener noreferrer" className="fab fa-linkedin fa-2x"></a>
       </div>
       </div>
   );
