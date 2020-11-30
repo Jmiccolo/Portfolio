@@ -49,7 +49,7 @@ const About = () => {
             <div className="about"> 
                 <div className="section glasses hide">
                     <h1>
-                        Hi! My name is Josh. I am a self-taught web developer working to improve the user experience.
+                        Hi! My name is Josh. I am a self-taught web developer living in Brooklyn, New York.
                     </h1>
                     <svg width="200" height="60" id="scroll">
                         <path d="M 5 5 L 100 50 L 195 5" stroke="white" fill="none" strokeWidth="2">
@@ -74,7 +74,7 @@ const About = () => {
                 </div>
             </div>
             <div className="section-odd blocks">
-                <p>I have a passion for people. Growing up I have always worked serving people from bagging groceries in a small city in NH to serving tables in the middle of Times Square, I have built an emotional intelligence driven by the empathy and patience necessary in this type of work that is an effective segue into the needs of a client and anticipating the issues one may have in developing products for the internet. </p>
+                <p>While problem solving is one of my best skills, coming to the realization that I wanted to work in web development took a bit of time. As a self-taught programmer I have used online web development bootcamps and personal research in order to obtain the skills necessary to build complex, responsive applications with some of the newest technologies. Below you can see how I have used multiple different languages, libraries and resources to create some engaging applications.</p>
             </div>
         </div>
     );
