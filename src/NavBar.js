@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react';
 
 const NavBar = () => {
-    function handleNav (e) {
+    function handleNav(e) {
         e.preventDefault();
-
+        const blockloc = document.querySelector(e.target.dataset.class);
+        const navbar = document.querySelector(".navbar").getBoundingClientRect().height;
+        console.log(navbar);
+        window.scrollTo(0, blockloc.offsetTop-navbar);
     }
     useEffect(()=>{
         setTimeout(function(){
@@ -23,9 +26,9 @@ const NavBar = () => {
             </div>
             <div className="nav-nav">
                 <ul className="nav-links">
-                    <li className="nav-link"><a href="/" data-target="About" onClick={handleNav}>About Me</a></li>
-                    <li className="nav-link"><a href="/" onClick={handleNav}>Projects</a></li>
-                    <li className="nav-link"><a href="/"onClick={handleNav}>Contact</a></li>
+                    <li className="nav-link"><a href="#" data-class=".about-container" onClick={handleNav}>About Me</a></li>
+                    <li className="nav-link"><a href="#" data-class=".Proj-container" onClick={handleNav}>Projects</a></li>
+                    <li className="nav-link"><a href="#" data-class=".form-container" onClick={handleNav}>Contact</a></li>
                 </ul>
             </div>
             <span className="nav-icon fa fa-bars fa-2x" onClick={handleClick}></span>
