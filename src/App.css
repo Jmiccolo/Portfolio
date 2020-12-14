@@ -71,6 +71,9 @@ header nav ul a:hover .links{
 #nav-button{
   display: none;
 }
+main {
+  background-color: var(--primary-color);
+}
 .Intro{
   width: 100%;
   background-color: var(--primary-color);
@@ -91,12 +94,70 @@ header nav ul a:hover .links{
 #HELP{
   display: inline;
   font-family: "Work Sans", sans-serif;
-  font-size: 2.8vw;
+  font-size: 3vw;
   width: 50%;
   color: white;
 }
 
+.section{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+  align-items: center;
+}
+
+.section-image{
+  box-sizing: border-box;
+  flex: 1 0 50%;
+}
+.section-text{
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.section-text h2{
+  font-size: 40px;
+  text-align: center;
+}
+.section-text p{
+  width: 75%;
+  font-size: 2vw;
+  text-align:justify;
+}
+#Performance {
+  transform-origin: 0% 0%;
+  transform: translate(0%, 25%);
+  animation: loading 5s ease-in-out forwards infinite;
+}
+#loadBar{
+  transform-origin: left;
+  animation: grow 5s ease-in-out forwards infinite;
+}
+ #X{
+   font-size: 500px;
+   animation: show 5s forwards infinite;
+   opacity: 0;
+ }
+ #check{
+   font-size: 500px;
+   animation: show 5s 2.5s forwards infinite;
+   opacity: 0;
+ }
+
 @media screen and (max-width:650px){
+  .section{
+    flex-direction: column;
+  }
+  .section-text p{
+    text-align: center;
+  }
+  .section:nth-of-type(2n){
+    flex-direction: column-reverse;
+  }
   .Intro{
     flex-direction: column-reverse;
     padding: 1em 0;
@@ -148,4 +209,177 @@ header nav ul a:hover .links{
   .nav-button-active{
     transform: rotate(180deg);
   }
+}
+#before{
+  font-size: 200px;
+  fill: white;
+  animation: switch 5s forwards infinite;
+}
+#after{
+  font-size: 200px;
+  fill: white;
+  animation: switch 5s 2.5s forwards infinite;
+  opacity: 0;
+}
+#vs {
+  font-size: 100px;
+}
+#talk-orange{
+  animation: talk 3s forwards infinite;
+}
+#talk-red{
+  animation: talk2 3s 1.5s forwards infinite;
+  transform:translate(50%, 50%)
+}
+#talk1{
+  transform:translate(30%, 40%);
+  animation: switch 3s 1.5s forwards infinite;
+  opacity: 0;
+}
+#talk2{
+  transform:translate(40%, 40%);
+  animation: switch 3s forwards infinite;
+}
+@keyframes loading{
+  0%{
+    transform:translate(0%, 30%);
+  }
+  40%{
+    transform:translate(50%, 30%);
+
+  }
+  41%{
+    transform: translate(50%, 30%) rotate(60deg);
+  }
+  59%{
+    transform: translate(50%, 30%) rotate(60deg);
+  }
+  60%{
+    transform: translate(0%, 30%) rotate(0);
+  }
+  80%{
+    transform:translate(65%, 30%);
+  }
+  100%{
+    transform:translate(65%, 30%);
+  }
+}
+
+@keyframes grow{
+  0%{
+    width: 0;
+  }
+  40%{
+    width: 1500px;
+    fill: green
+  }
+  41%{
+    fill: red;
+  }
+  59%{
+    fill: red;
+    width: 1500px;
+  }
+  60%{
+    fill: green;
+    width: 0;
+  }
+  80%{
+    width: 2250px;
+  }
+  100%{
+    width: 2250px;
+  }
+}
+
+@keyframes show{
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  41%{
+    opacity: 1;
+  }
+  59%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@keyframes switch{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  51%{
+    opacity: 0;
+  }
+100%{
+  opacity: 0;
+}
+}
+
+
+@keyframes talk {
+  0%{
+    transform:translate(25%, 50%);
+  }
+  10%{
+    transform:translate(25%, 45%) rotate(5deg);
+  }
+  20%{
+    transform:translate(25%, 50%);
+  }
+  30%{
+    transform:translate(25%, 45%) rotate(-5deg);
+  }
+  40%{
+    transform:translate(25%, 50%);
+  }
+  50%{
+    transform:translate(25%, 45%) rotate(5deg);;
+  }
+  55%{
+    transform:translate(25%, 50%);
+  }
+  100%{
+    transform:translate(25%, 50%);
+  }
+  
+}
+@keyframes talk2 {
+  0%{
+    transform:translate(50%, 50%);
+  }
+  10%{
+    transform:translate(50%, 45%) rotate(-5deg);
+  }
+  20%{
+    transform:translate(50%, 50%);
+  }
+  30%{
+    transform:translate(50%, 45%) rotate(5deg);
+  }
+  40%{
+    transform:translate(50%, 50%);
+  }
+  50%{
+    transform:translate(50%, 45%) rotate(-5deg);
+  }
+  55%{
+    transform:translate(50%, 50%);
+  }
+  100%{
+    transform:translate(50%, 50%);
+  }
+  
 }
