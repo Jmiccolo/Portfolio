@@ -1,9 +1,14 @@
 import React from 'react';
+import "./footer.css";
 
 const Footer = () => {
     return (
         <footer>
-            <h1>FOOTER</h1>
+            <address>
+                Josh Miccolo Web Designs
+                joshmiccolowebdesigns@gmail.com
+
+            </address>
         </footer>
     );
 };
