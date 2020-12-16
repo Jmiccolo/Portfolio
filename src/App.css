@@ -286,6 +286,61 @@ button{
 button:hover{
   transform:scale(1.1) translate(1px, 1px);
 }
+
+.skills {
+  flex: 1 1 400px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.skills h1 {
+  color: white;
+  width: 100%;
+}
+.skills span {
+  flex: 1 1 30%;
+}
+.fab {
+  padding: 1rem;
+  filter: drop-shadow(1px 1px 2px black);
+}
+.fa-html5 {
+  color: #FD7E14;
+}
+.fa-css3-alt {
+  color: #1579B8;
+}
+.fa-js{
+  color: #EFD81D;
+}
+.fa-node-js{
+  color: #58A644;
+}
+.fa-python{
+  color: #3276AE;
+}
+.fa-react{
+  color: #00D1F7;
+}
+
+.Projects{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+main h1{
+  margin: 0;
+  padding: 0;
+}
+.Body-Header{
+  margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
 @keyframes loading{
   0%{
     transform:translate(0%, 30%);

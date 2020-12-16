@@ -13,11 +13,11 @@ const Landing = (props) => {
                     Hi, I am Josh. I am a self-taught Web Developer working to help you reach your audience with unique, performative websites.
                 </blockquote>
             </section>
-            <h2 className="section-title"><u>How can I help?</u></h2>
+            <h2 className="section-title"><u>What do I do?</u></h2>
            <section className="Unique section">
                 <div className="section-text">
                 <h2>Unique Websites</h2>
-                <p>As a developer, I am committed to giving your audience a unique experience. Let me know what is needed for your website and we can discuss your best choices and how each choice will affect your audience. See some of my past work here!</p>
+                <p>As a developer, I am committed to giving the audience a unique experience. Using HTML, CSS, Javascript to create an amazing look that will stand out from others.</p>
                 <button className="landing-links" onClick={()=>{props.changeUrl("/Portfolio")}}>Website Examples</button> 
                 </div>
                 <svg className="section-image" fill="none" viewBox="0 0 1000 750">
@@ -49,7 +49,7 @@ const Landing = (props) => {
                 </svg>
                 <div className="section-text">
                 <h2>Optimization </h2>
-                <p>I push myself to build fast, well documented and performative websites that get the attention of an audience. If yours is having trouble I would love to assist.</p>
+                <p>I push myself to build fast, well documented and performative websites that get the attention of an audience. I have effectively built backend services with nodejs and have experience in both SQL and NoSQL databases.</p>
                 <button className="landing-links" onClick={()=>props.changeUrl("/Resume")}>The Technologies I Use</button>
                 </div>
            </section>
