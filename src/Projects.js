@@ -1,4 +1,6 @@
 import React from 'react';
+import AffirmVideo from '../public/DailyAffirmations.mp4'
+import DNDVideo from '../public/DNDFYAM.mp4'
 
 const Projects = () => {
     window.addEventListener("scroll", function () {
@@ -22,7 +24,11 @@ const Projects = () => {
             Description:"An application built to ease users into the creation and playing of a DND character with options for the Dungeon Master to build a campaign. Includes dice rollers, stat automation, as well as a playable mode where users can easily roll traits, attacks, and damage",
             Website:"https://dndforyouandme.herokuapp.com/",
             Github:"https://github.com/Jmiccolo/DnDForYouAndMe",
+<<<<<<< HEAD
             Video:"/DNDFYAM.mp4",
+=======
+            Video: DNDVideo,
+>>>>>>> d8ba32d67a2148f858ff6d7f97334c064ea539c2
             Languages: ["html5", "css3-alt", "js", "node-js"]
         },
         {
@@ -30,7 +36,11 @@ const Projects = () => {
             Description:"Using <a href='https://github.com/annthurium' target='__blank'>annthurium's</a> Affirmation API to create a small application to remind yourself of the good work you have done and that you are good enough",
             Website:"https://miccolo-daily-affirmations.herokuapp.com/",
             Github:"https://github.com/Jmiccolo/DailyAffirmations",
+<<<<<<< HEAD
             Video:"/DailyAffirmations.mp4",
+=======
+            Video: AffirmVideo,
+>>>>>>> d8ba32d67a2148f858ff6d7f97334c064ea539c2
             Languages: ["html5", "css3-alt", "js", "node-js"]
         },
     ]
