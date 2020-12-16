@@ -7,6 +7,7 @@ function App() {
         const [loaded, setLoaded] = useState(false);
         if(window.localStorage.FirstTime === undefined){
         return (
+
               <div>
               <Loading setLoaded={setLoaded} />
               <Main className="home"/>

@@ -3,7 +3,7 @@ import React from 'react';
 const Umbrella = (props) => {
     return (
         <g id={props.id} className={props.className} transform={props.beginning}>
-                <path className="logo_handle" fill="none" stroke="brown" strokeWidth="10" d="M 250.00,195.00
+                <path className="logo_handle" fill="none" stroke={props.handle? props.handle: "brown"} strokeWidth="10" d="M 250.00,195.00
                     C 250.00,195.00 250.00,347.00 250.00,347.00" />
                 <path className="logo_back" fill={props.color.back} d="M 1.00,249.00
                     C 1.00,221.71 5.68,195.86 14.33,170.00
@@ -29,7 +29,7 @@ const Umbrella = (props) => {
                     M 237.00,499.00
                     C 237.00,499.00 265.00,500.00 265.00,500.00
                         265.00,500.00 237.00,499.00 237.00,499.00 Z" />
-                <path className="logo_J" fill="none" stroke="black" strokeWidth={props.strokeWidth} d="M 250.00,311.00
+                <path className="logo_J" fill="none" stroke={props.bottom? props.bottom : "black"} strokeWidth={props.strokeWidth} d="M 250.00,311.00
                     C 250.00,311.00 250.00,424.00 250.00,424.00
                         250.00,500.00 167.00,500.00 167.00,424.00" />
                 <path className="logo_front" fill={props.color.front} d="M 166.00,250.00

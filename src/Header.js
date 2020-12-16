@@ -1,18 +1,20 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Umbrella from './logo/umbrella';
 import Text from './logo/text';
 
 const Header = () => {
     const links = []
-    const linkgroups = [{title:"About Me", color:{back:"#F42ECA", front:"#F30752"}}, {title:"Resume", color:{back:"#D6FFDD", front:"#AEED90"}}, {title:"Portfolio", color:{back:"#F3FED2", front:"#F4CD06"}}, {title:"Clients", color:{back:"#D627B3", front:"#820153"}}]
+    const linkgroups = [{title:"Home", color:{front:"#5f9eae", back:"#afeeff"}}, {title:"Resume", color:{back:"#D6FFDD", front:"#AEED90"}}, {title:"Portfolio", color:{back:"#F3FED2", front:"#F4CD06"}}, {title:"About Me", color:{back:"#F42ECA", front:"#F30752"}}, {title:"Contact Me", color:{back:"#D627B3", front:"#820153"}}]
     for(let [i, link] of linkgroups.entries()){
         links.push(<li key={i} className="nav-link">
-                    <a href={`/${link.title.replace(" ", "")}`}>
+                    <Link onClick={()=>{document.querySelector("#nav-button").classList.toggle("nav-button-active");
+                document.querySelector(".nav-links").classList.toggle("nav-links-active")}}to={`/${link.title.replace(" ", "")}`}>
                         <svg className="links" width="50px" height="50px" stroke="black" strokeWidth="1px" fill="none" viewBox="0 0 500 500">
                                 <Umbrella strokeWidth="15" id={link.title} color={link.color}/>   
                         </svg>
                             {link.title}
-                        </a>
+                        </Link>
                     </li>)
     }
     return (
@@ -25,7 +27,11 @@ const Header = () => {
                     <Text fontSize="15em" textLength="1500"/>
                 </svg>
             </a>
-            <svg className="links " id="nav-button" width="50px" height="50px" stroke="black" strokeWidth="1px" fill="none" viewBox="0 0 500 500" onClick={()=>{document.querySelector("#nav-button").classList.toggle("nav-button-active");document.querySelector(".nav-links").classList.toggle("nav-links-active")}}>
+            <svg className="links " id="nav-button" width="50px" height="50px" stroke="black" strokeWidth="1px" fill="none" viewBox="0 0 500 500" onClick={()=>{
+                document.querySelector("#nav-button").classList.toggle("nav-button-active");
+                document.querySelector(".nav-links").classList.toggle("nav-links-active")}
+                }
+            >
                     <Umbrella strokeWidth="15" color={{front:"#5f9eae",back:"#afeeff"}}/>   
             </svg>
             </div>

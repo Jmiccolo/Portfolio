@@ -1,0 +1,27 @@
+.About-Header {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+.About-image{
+    width: 30%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px black;
+}
+.About-text{
+    font-size: 5vh;
+    flex-grow: 1;
+    padding: 0 1em;
+    text-align: justify;
+    color: white;
+}
+.About-text a{
+    color: white;
+    text-decoration: none;
+    transition: color 500ms ease-in
+}
+.About-text a:hover{
+    color: #F30752
+}

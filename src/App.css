@@ -13,6 +13,9 @@ body{
   margin: 0;
   padding: 0;
 }
+.overflow-hidden{
+  overflow:hidden;
+}
 .home {
   margin:0;
   padding: 0;
@@ -54,22 +57,27 @@ header nav ul a {
   color: Black;
   padding: 0 .25em;
   font-size: 1.5vw;
+  display: flex;
+  align-items: center;
 }
 .links{
   position: relative;
   transition: transform 1s ease-in-out;
 }
 header nav ul a:hover .links{
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .nav-header {
   width: fit-content;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0.5em;
 }
 #nav-button{
   display: none;
+  align-self: flex-end;
 }
 main {
   background-color: var(--primary-color);
@@ -86,19 +94,26 @@ main {
   height: 40vw;
   position: relative;
   z-index: 0;
-  clip-path: url("#Selection");
   background-image: url("https://scontent-lga3-2.xx.fbcdn.net/v/t1.0-9/53817056_10219179150808238_7047033716228489216_o.jpg?_nc_cat=105&ccb=2&_nc_sid=730e14&_nc_ohc=umYMndsrxQsAX_b7Zhv&_nc_ht=scontent-lga3-2.xx&oh=5051598333b5360079a9a07446e8a6a2&oe=5FFC05A1");
   background-size: cover;
   background-position: center;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px black;
+  margin-left: 1em;
 }
-#HELP{
-  display: inline;
+.HELP{
   font-family: "Work Sans", sans-serif;
-  font-size: 3vw;
+  font-size: 4vw;
   width: 50%;
   color: white;
+  text-align: center;
 }
-
+.section-title{
+  width: 100%;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
 .section{
   display: flex;
   box-sizing: border-box;
@@ -110,6 +125,7 @@ main {
 .section-image{
   box-sizing: border-box;
   flex: 1 0 50%;
+  filter: drop-shadow(2px 2px 5px black);
 }
 .section-text{
   flex: 1 0 50%;
@@ -126,7 +142,7 @@ main {
 .section-text p{
   width: 75%;
   font-size: 2vw;
-  text-align:justify;
+  text-align: justify;
 }
 #Performance {
   transform-origin: 0% 0%;
@@ -147,24 +163,41 @@ main {
    animation: show 5s 2.5s forwards infinite;
    opacity: 0;
  }
-
-@media screen and (max-width:650px){
+.btn {
+  padding: 1em;
+  width: 50%;
+  border: 2px solid black;
+  border-radius: 18px;
+  font-size: 20px;
+  background-color: #afeeff;
+}
+.btn a{
+  text-decoration: none;
+  color: #3f7e8e;
+}
+@media screen and (max-width:800px){
   .section{
     flex-direction: column;
   }
   .section-text p{
     text-align: center;
+    width: 100%;
+    font-size: 4vh;
   }
   .section:nth-of-type(2n){
     flex-direction: column-reverse;
   }
   .Intro{
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 1em 0;
   }
-  #HELP{
+  .Intro-image{
     width: 75%;
-    font-size: 4vw;
+    height: 30vh;
+  }
+  .HELP{
+    width: 100%;
+    font-size: 5vw;
     text-align: center;
   }
   .nav-header{
@@ -229,16 +262,29 @@ main {
 }
 #talk-red{
   animation: talk2 3s 1.5s forwards infinite;
-  transform:translate(50%, 50%)
+  transform:translate(50%, 35%)
 }
 #talk1{
-  transform:translate(30%, 40%);
+  transform:translate(30%, 15%);
   animation: switch 3s 1.5s forwards infinite;
   opacity: 0;
 }
 #talk2{
-  transform:translate(40%, 40%);
+  transform:translate(40%, 15%);
   animation: switch 3s forwards infinite;
+}
+button{
+  background: none;
+  border: 4px solid white;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  cursor: pointer;
+}
+button:hover{
+  transform:scale(1.1) translate(1px, 1px);
 }
 @keyframes loading{
   0%{
@@ -331,55 +377,55 @@ main {
 
 @keyframes talk {
   0%{
-    transform:translate(25%, 50%);
+    transform:translate(25%, 35%);
   }
   10%{
-    transform:translate(25%, 45%) rotate(5deg);
+    transform:translate(25%, 30%) rotate(5deg);
   }
   20%{
-    transform:translate(25%, 50%);
+    transform:translate(25%, 35%);
   }
   30%{
-    transform:translate(25%, 45%) rotate(-5deg);
-  }
+    transform:translate(25%, 30%) rotate(-5deg);
+ }
   40%{
-    transform:translate(25%, 50%);
+    transform:translate(25%, 35%);
   }
   50%{
-    transform:translate(25%, 45%) rotate(5deg);;
+    transform:translate(25%, 30%) rotate(5deg);;
   }
   55%{
-    transform:translate(25%, 50%);
+    transform:translate(25%, 35%);
   }
   100%{
-    transform:translate(25%, 50%);
+    transform:translate(25%, 35%);
   }
   
 }
 @keyframes talk2 {
   0%{
-    transform:translate(50%, 50%);
+    transform:translate(50%, 35%);
   }
   10%{
-    transform:translate(50%, 45%) rotate(-5deg);
+    transform:translate(50%, 30%) rotate(-5deg);
   }
   20%{
-    transform:translate(50%, 50%);
+    transform:translate(50%, 35%);
   }
   30%{
-    transform:translate(50%, 45%) rotate(5deg);
+    transform:translate(50%, 30%) rotate(5deg);
   }
   40%{
-    transform:translate(50%, 50%);
+    transform:translate(50%, 35%);
   }
   50%{
-    transform:translate(50%, 45%) rotate(-5deg);
+    transform:translate(50%, 30%) rotate(-5deg);
   }
   55%{
-    transform:translate(50%, 50%);
+    transform:translate(50%, 35%);
   }
   100%{
-    transform:translate(50%, 50%);
+    transform:translate(50%, 35%);
   }
   
 }

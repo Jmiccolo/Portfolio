@@ -9,6 +9,7 @@ const Container = (props) => {
         const newprops = umbrellaProps(i);
         umbrellas.push(<Umbrella {...newprops} strokeWidth="10" key={i}/>)
     }
+    document.querySelector("body").classList.add("overflow-hidden");
     useEffect(function(){
         const logo = document.querySelector("#homeLogo")
         logo.addEventListener("animationend", function(){
@@ -20,6 +21,7 @@ const Container = (props) => {
             setTimeout(function(){
                     const text = document.getElementById("logoText");
                     text.classList.add("hide");
+                    document.querySelector("body").classList.remove("overflow-hidden")
                 }, 500);
             const rect = document.querySelector("#canvas");
             rect.classList.add("remove")

@@ -1,0 +1,48 @@
+.socials {
+box-sizing: border-box;
+position: fixed;
+bottom: 0;
+right: 0;
+z-index: 2;
+margin: 0 .75em .75em 0;
+color: white;
+display: flex;
+height: 10%;
+justify-content: flex-end;
+align-items: center;
+}
+.socials a {
+padding: 10px;
+text-decoration: none;
+color: white;
+border-radius: 50%;
+background-color: black;
+}
+
+.socials .fa-twitter {
+color: #1DA1F3;
+
+}
+
+.socials .fa-linkedin {
+color: #0A66C2;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    height: 20vh;
+}
+address {
+    text-align: center;
+    font-size: 2vw;
+}
+
+address a{
+    color: white;
+    text-decoration: none;
+}
+
+address a:hover{
+    color:#5f9eae;
+}
