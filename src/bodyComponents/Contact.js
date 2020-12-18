@@ -18,8 +18,12 @@ const Contact = () => {
                 success.style.color = "blue";
                 success.style.backgroundColor = "white";
                 document.querySelector(".form-container").prepend(success);     
-            }, 
-            (error) => {console.log(error.text);}); 
+            },)
+            .catch((error) => {const failure = document.createElement("div");
+                failure.innerText = "Something went wrong";
+                failure.style.color = "red";
+                failure.style.fontSize="30px";
+                document.querySelector(".form-container").prepend(failure);}); 
     }
     return (
         <main className="form-container">
