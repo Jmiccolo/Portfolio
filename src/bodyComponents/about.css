@@ -6,7 +6,9 @@
     color: white;
 }
 .image-container{
-    width: 200%;
+    flex: 1 0 45%;
+    box-sizing: border-box;
+    padding: 1em;
 }
 .About-image{
     width: 100%;
@@ -24,11 +26,12 @@
     }
 }
 .About-text{
-    font-size: 5vh;
+    font-size: 3vw;
     flex-grow: 1;
     padding: 0 1em;
     text-align: justify;
     color: white;
+    box-sizing: border-box;
 }
 .About-text a{
     color: white;
@@ -39,11 +42,19 @@
     color: #F30752
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 800px){
     .image-container{
-        width: 100%;
+        width: 95%;
+        margin: 0;
+        padding: 0;
     }
     .About-text{
-        font-size: 2.5vh;
+        font-size: 3vh;
+    }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape){
+    .About-text{
+        font-size: 7vh;
     }
 }

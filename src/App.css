@@ -17,10 +17,6 @@ body{
 .overflow-hidden{
   overflow-y:hidden;
 }
-.movable{
-  position: relative;
-  height: fit-content;
-}
 .home {
   margin:0;
   padding: 0;
@@ -34,6 +30,8 @@ header {
   border-bottom: 4px solid var(--primary-color);
   position: sticky;
   top:0;
+  left: 0;
+  box-sizing: border-box;
   background-color: white;
   z-index: 1;
 }
@@ -41,6 +39,7 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
 }
 header nav ul {
   display: flex;
@@ -64,6 +63,10 @@ header nav ul a {
   font-size: 1.5vw;
   display: flex;
   align-items: center;
+}
+main{
+  padding: 0 .25em 1em;
+  box-sizing: border-box;
 }
 .links{
   position: relative;
@@ -123,7 +126,6 @@ main {
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: 1em;
   align-items: center;
   justify-content: center;
 }
@@ -198,8 +200,8 @@ main {
     padding: 1em 0;
   }
   .Intro-image{
-    width: 75%;
-    height: 30vh;
+    width: 90%;
+    height: 300px;
   }
   .HELP{
     width: 100%;
@@ -209,9 +211,16 @@ main {
   .nav-header{
     width: 100%;
   }
+  header{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
   header nav {
+    width: 100%;
     flex-direction: column;
-    height: 10vh;
+    height: 75px;
+    box-sizing: border-box;
   }
   .nav-links{
     display: flex;
@@ -363,12 +372,12 @@ main h1{
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 75vh;
   margin: 0 5%;
 }
 
 .projectblock {
 color: white;
+position: relative;
 display: flex;
 flex-direction: column;
 box-sizing: border-box;
@@ -380,9 +389,6 @@ align-items: center;
   font-size: 25px;
   padding: 0;
   margin: 0;
-}
-.projectblock iframe {
-  height: 150px;
 }
 .projectblock a {
   color: white;
@@ -436,13 +442,15 @@ align-items: center;
   border-radius: 20px;
   color: white;
 }
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 750px){
   .Projects{
     flex-direction: column;
     height: fit-content;
   }
   .projectblock{
     padding-top: 1em;
+    width: 100%;
+    align-items: center;
   }
   .form-row{
     width: 95%;
@@ -648,4 +656,56 @@ align-items: center;
 
 .portfolio-image{
   border-radius: 10px;
+}
+
+.modal{
+  opacity: 0;
+  position:absolute;
+  z-index: 3;
+  border: 5px solid white;
+  background: var(--primary-color);
+  border-radius: 10px;
+  right: 100%;
+  width: 100%;
+  transition: opacity 300ms ease-in-out;
+  text-align: justify;
+  padding: 1em;
+  display: none;
+}
+
+.modal-show{
+  display: block;
+  opacity: 1;
+}
+
+.modal a{
+  color: blue;
+}
+.min-project{
+  display: none;
+}
+@media only screen and (max-width: 800px){
+
+  .modal{
+    width: 90%;
+    top: 10%;
+    left: 5%;
+    box-sizing: border-box;
+  }
+  .modal-show{
+    display: none;
+  }
+  .min-project{
+    display: block;
+    font-size: 25px;
+  border: 4px solid white;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;
+  margin: 4px 0;
+  }
+  .min-modal-show{
+    display: block;
+    opacity: 1;
+  }
 }

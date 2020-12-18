@@ -36,6 +36,7 @@ const Resume = () => {
                 <li>Express</li>
                 <li>Django</li>
                 <li>Flask</li>
+                <li>EJS</li>
                 </ul>
                 </div>
                 <div className="resume-list">
@@ -50,7 +51,7 @@ const Resume = () => {
             <h1 className="Body-Header" style={{width:"100%"}}>Where I Learned</h1>
             <div className="resume-list">
             <h3>Colt Steele's Web Development Boot Camp 2020</h3>
-            <p>Introduction to HTML5, Semantic HTML, CSS3, Javascript, ES6, Boostrap4, Express, MongoDB</p>
+            <p>Introduction to HTML5, Semantic HTML, CSS3, Javascript, ES6, Boostrap4, Express, EJS, MongoDB</p>
             </div>
             
             <div className="resume-list">

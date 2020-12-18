@@ -17,7 +17,7 @@ const Landing = (props) => {
            <section className="Unique section">
                 <div className="section-text">
                 <h2>Creative Websites</h2>
-                <p>As a developer, I am committed to giving the audience a unique experience. I use HTML, CSS, Javascript with other languages to create an amazing look that will stand out from others.</p>
+                <p>As a developer, I am committed to giving the audience a unique experience. I use HTML, CSS, Javascript with different libraries to create an amazing look that will stand out from others.</p>
                 <Link className="landing-links" to="/Portfolio"><button>Website Examples</button></Link> 
                 </div>
                 <svg className="section-image" fill="none" viewBox="0 0 1000 750">

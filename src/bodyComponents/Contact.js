@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
 
-const Clients = () => {
+const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -37,4 +37,4 @@ const Clients = () => {
     );
 };
 
-export default Clients;
+export default Contact;

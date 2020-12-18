@@ -22,7 +22,7 @@ const Container = (props) => {
             window.localStorage.FirstTime = true;
             const canvas = document.getElementById("canvas")
             canvas.addEventListener("transitionend", function(){
-                props.setLoaded(true);
+                setTimeout(function(){props.setLoaded(true);},100);
             })
     });
     });

@@ -1,22 +1,23 @@
 import React from 'react';
-import {CSSTransition} from 'react-transition-group';
-import Footer from "./Footer";
 import Landing from "./bodyComponents/Landing";
 import About from "./bodyComponents/About";
 import Resume from "./bodyComponents/Resume";
 import Portfolio from "./bodyComponents/Portfolio";
-import Clients from "./bodyComponents/Clients";
-import {Route, withRouter, Switch, useHistory} from "react-router-dom";
+import Contact from "./bodyComponents/Contact";
+import ScrollToTop from "./ScrollToTop";
+import {Route, withRouter, Switch} from "react-router-dom";
 
 const Body = () => {
     const routes = [
         {path:"/AboutMe", Component: About},
         {path:"/Resume",  Component: Resume},
         {path:"/Portfolio", Component: Portfolio},
-        {path:"/ContactMe", Component: Clients},
+        {path:"/ContactMe", Component: Contact},
         {path:"/Home", Component: Landing}
             ];
     return (
+        <>
+        <ScrollToTop/>
         <Switch>
         {routes.map(({path, Component})=>(
             <Route key={path} exact path={path}>
@@ -27,6 +28,7 @@ const Body = () => {
             <Landing/>
         </Route>
         </Switch>
+        </>
     );
 };
 
