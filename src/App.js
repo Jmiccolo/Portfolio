@@ -10,11 +10,11 @@ function App() {
 
               <div>
               <Loading setLoaded={setLoaded} />
-              <Main className="home"/>
+              <Main/>
               </div>
         )
         }else{
-          return <Main className="home"/>
+          return <Main/>
         } 
 }
 

@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 const Main = (props) => {
     return (
-        <div className={props.className} > 
+        <div className="home"> 
             <Router>
                 <Header/>
                 <Body/>

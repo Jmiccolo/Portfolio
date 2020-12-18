@@ -1,24 +1,24 @@
-import React, {useEffect} from 'react';
-import {withRouter} from 'react-router-dom';
+import React from 'react';
+import {withRouter, Link} from 'react-router-dom';
 import Umbrella from "../logo/umbrella";
 import Talk1 from "../logo/talk1";
 import Talk2 from "../logo/talk2";
 
 const Landing = (props) => {
     return (
-        <main id="Landing">
+        <main>
             <section className="Intro">
                 <div className="Intro-image"></div>
                 <blockquote className="HELP">
                     Hi, I am Josh. I am a self-taught Web Developer working to help you reach your audience with unique, performative websites.
                 </blockquote>
             </section>
-            <h2 className="section-title"><u>What do I do?</u></h2>
+            <h2 className="Body-Header"><u>What do I do?</u></h2>
            <section className="Unique section">
                 <div className="section-text">
-                <h2>Unique Websites</h2>
-                <p>As a developer, I am committed to giving the audience a unique experience. Using HTML, CSS, Javascript to create an amazing look that will stand out from others.</p>
-                <button className="landing-links" onClick={()=>{props.changeUrl("/Portfolio")}}>Website Examples</button> 
+                <h2>Creative Websites</h2>
+                <p>As a developer, I am committed to giving the audience a unique experience. I use HTML, CSS, Javascript with other languages to create an amazing look that will stand out from others.</p>
+                <Link className="landing-links" to="/Portfolio"><button>Website Examples</button></Link> 
                 </div>
                 <svg className="section-image" fill="none" viewBox="0 0 1000 750">
                     <defs>
@@ -50,14 +50,14 @@ const Landing = (props) => {
                 <div className="section-text">
                 <h2>Optimization </h2>
                 <p>I push myself to build fast, well documented and performative websites that get the attention of an audience. I have effectively built backend services with nodejs and have experience in both SQL and NoSQL databases.</p>
-                <button className="landing-links" onClick={()=>props.changeUrl("/Resume")}>The Technologies I Use</button>
+                <Link className="landing-links" to="/Resume"><button>The Technologies I Use</button></Link> 
                 </div>
            </section>
            <section className="Consulting section">
                 <div className="section-text">
-                                <h2>Get Feedback</h2>
+                                <h2>Feedback</h2>
                 <p>I am very passionate about projects and would love to discuss yours. If you are a business, entrepreneur or fellow coder looking to work out the details I would be happy to consult.</p>
-                <button className="landing-links" onClick={()=>{props.changeUrl("/ContactMe")}}>Contact Me!</button>
+                <Link className="landing-links" to="/ContactMe"><button>Contact Me</button></Link> 
                 </div>
                 <svg className="section-image" fill="none" viewBox="0 0 2000 1000">
                     <Umbrella id="talk-orange"strokeWidth="35" color={{back:"#F6C930", front:"#F5A601"}}/>

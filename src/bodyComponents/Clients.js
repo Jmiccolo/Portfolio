@@ -23,14 +23,14 @@ const Clients = () => {
     }
     return (
         <main className="form-container">
-            <h2>Contact Me</h2>
+            <h2 className="Body-Header">Contact Me</h2>
             <form id="contact" onSubmit={handleSubmit}>
                 <label htmlFor="from_name">Name</label>
                 <input className="form-row" value={name} type="text" required name="from_name" onChange={(e) => setName(e.target.value)}/>
                 <label htmlFor="reply_to">Email</label>
                 <input value={email} className="form-row" type="email" required name="reply_to" onChange={(e) => setEmail(e.target.value)}/>
                 <label htmlFor="message">Message</label>
-                <textarea value={message} className="form-row" required name="message" cols="30" rows="10" onChange= {(e) => setMessage(e.target.value)}></textarea>
+                <textarea value={message} className="form-row" placeholder="Leave me a message here!" required name="message" cols="30" rows="10" onChange= {(e) => setMessage(e.target.value)}></textarea>
                 <button className="form-row-button">Submit</button>
             </form>
         </main>

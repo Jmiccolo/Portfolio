@@ -12,7 +12,10 @@
     height: 100%;
 }
 #homeLogo{
-    animation: riseUpMain 5s 1s ease-in-out forwards;
+    animation: riseUpMain 4s 1s ease-in-out forwards;
+}
+.homeText{
+    animation: riseUp 1s 4s ease-in-out forwards;
 }
 #canvas{
     transform-origin: top;
@@ -39,12 +42,12 @@ svg text{
         transform: translateY(0%);
     }
     100%{
-        transform: translateY(-300%);
+        transform: translateY(-200%);
     }
 }
 @keyframes riseUp{
     0%{
-        transform: translateY(100%);
+        transform: translateY(0);
     }
     100%{
         transform: translateY(-200%);

@@ -12,9 +12,14 @@
 body{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .overflow-hidden{
-  overflow:hidden;
+  overflow-y:hidden;
+}
+.movable{
+  position: relative;
+  height: fit-content;
 }
 .home {
   margin:0;
@@ -120,6 +125,7 @@ main {
   width: 100%;
   padding: 1em;
   align-items: center;
+  justify-content: center;
 }
 
 .section-image{
@@ -282,9 +288,16 @@ button{
   color: white;
   font-family: "Work Sans", sans-serif;
   cursor: pointer;
+  outline: none;
 }
 button:hover{
   transform:scale(1.1) translate(1px, 1px);
+}
+button:active{
+  transform: scale(.9) translate(-1px, -1px);
+}
+button:focus{
+  outline: none;
 }
 
 .skills {
@@ -324,6 +337,9 @@ button:hover{
 .fa-react{
   color: #00D1F7;
 }
+.fa-bootstrap{
+  color: #8C12FD;
+}
 
 .Projects{
   display: flex;
@@ -336,10 +352,101 @@ main h1{
 }
 .Body-Header{
   margin: 0;
-    padding: 0;
-    text-align: center;
-    font-size: 50px;
-    color: white;
+  padding: 0;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-decoration: underline;
+}
+.Projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 75vh;
+  margin: 0 5%;
+}
+
+.projectblock {
+color: white;
+display: flex;
+flex-direction: column;
+box-sizing: border-box;
+flex: 0 0 25%;
+padding: 1%;
+align-items: center;
+}
+.projectblock h3 {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+}
+.projectblock iframe {
+  height: 150px;
+}
+.projectblock a {
+  color: white;
+  text-decoration: none;
+}
+.Websites {
+  font-size: 25px;
+  border: 4px solid white;
+  border-radius: 15px;
+  width: 100%;
+  text-align: center;
+  margin: 4px 0;
+}
+.Githubs {
+  font-size: 25px;
+  border: 4px solid white;
+  width: 100%;
+  text-align: center;
+  border-radius: 15px;
+    margin: 4px 0;
+}
+.form-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+#contact {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-row {
+  width: 50%;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 2px;
+  text-align: center;
+  padding: .5vh;
+}
+
+.form-row-button {
+  margin: 2px;
+  font-size: 25px;
+  width: 40%;
+  border-radius: 20px;
+  color: white;
+}
+@media only screen and (max-width: 650px){
+  .Projects{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .projectblock{
+    padding-top: 1em;
+  }
+  .form-row{
+    width: 95%;
+  }
 }
 @keyframes loading{
   0%{
@@ -483,4 +590,62 @@ main h1{
     transform:translate(50%, 35%);
   }
   
+}
+.resume-main{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resume-section{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.resume-section h3{
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-list{
+  color: white;
+  width: 50%;
+  font-size: 20px;
+  padding: .5em;
+  text-align: center;
+}
+
+.resume-list h4{
+  text-decoration: underline;
+  margin: 0;
+}
+.resume-list ul{
+  padding: 0;
+  margin: 0;
+}
+.resume-list li{
+  list-style: none;
+}
+
+@media only screen and (max-width:750px){
+  body{
+    overflow-x:hidden;
+  }
+  .resume-main{
+    flex-direction: column;
+    align-items: center;
+  }
+  .resume-section{
+    width: 100%;
+  }
+  .resume-list{
+    width: 90%;
+  }
+}
+
+.portfolio-image{
+  border-radius: 10px;
 }
