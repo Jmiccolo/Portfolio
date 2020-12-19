@@ -13,8 +13,8 @@ const createUmbrellas = ()=>{
             isneg = -1
         }
         const x = Math.floor(Math.random()*isneg*1200)
-        const beginning = `translate(${x}, 1500)`;
-        const end = `translate(${x}, -1500)`;
+        const beginning = `translate(${x}px, 1500px)`;
+        const end = `translate(${x}px, -1500px)`;
         const color = colors[Math.floor(Math.random()*6)];
         const cubic = `cubic-bezier(${Math.random().toFixed(3)}, ${Math.random().toFixed(3)}, ${Math.random().toFixed(3)}, 1)`;
         const className = "umbrella none";
