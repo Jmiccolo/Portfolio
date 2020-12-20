@@ -27,8 +27,8 @@ const Landing = (props) => {
                             @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
                         </style>
                     </defs>
-                    <Umbrella handle="white" bottom="white" strokeWidth="35" beginning="translate(0 175)" color={{back:"#FFFFFF", front:"#FFFFFF"}}/>
-                    <Umbrella strokeWidth="35" beginning="translate(500 175)" color={{front:"#5f9eae",back:"#afeeff"}}/>
+                    <Umbrella handle="white" bottom="white" strokeWidth="35" transform="translate(0 175)" color={{back:"#FFFFFF", front:"#FFFFFF"}}/>
+                    <Umbrella strokeWidth="35" transform="translate(500 175)" color={{front:"#5f9eae",back:"#afeeff"}}/>
                     <text id="vs" transform="translate(400 700)" fontFamily="Work Sans" fill="white">VS</text>
                     
                 </svg>
