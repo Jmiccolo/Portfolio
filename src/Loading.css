@@ -15,7 +15,8 @@
     transform: translate(120px, 1500px);
     animation: riseUpMain 4s 1s ease-in-out forwards;
 }
-.homeText{
+#homeText{
+    transform: translate(0px, 0px);
     animation: riseUp 1s 4s ease-in-out forwards;
 }
 #canvas{
@@ -40,7 +41,7 @@ svg text{
         transform: translateY(0px);
     }
     75%{
-        transform: translateY(0%);
+        transform: translateY(0px);
     }
     100%{
         transform: translateY(-2000px);

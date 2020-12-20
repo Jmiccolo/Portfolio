@@ -30,7 +30,7 @@ const Container = (props) => {
         <svg id="mainLogo" xmlns="http://www.w3.org/2000/svg" fill="none" width="100vw" height="100vh" viewBox="0 0 1000 1000">
         <rect id="canvas" height="5000" width="5000" x="-1500"  y="-1500" style={{fill:"white"}}/>
         <Umbrella id="homeLogo" color={{front:"#5f9eae",back:"#afeeff"}} strokeWidth="35"/>
-        <Text className="homeText" fontSize="8em" textLength="720"/>
+        <Text id="homeText" fontSize="8em" textLength="720"/>
         {umbrellas}
         </svg>
     );

@@ -5,7 +5,7 @@ import Main from "./Main";
 
 function App() {
         const [loaded, setLoaded] = useState(false);
-        if(window.localStorage.FirstTime === undefined){
+        if(window.localStorage.FirstTime === undefined && loaded === false){
         return (
 
               <div>
