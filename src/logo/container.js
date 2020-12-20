@@ -7,13 +7,36 @@ const Container = (props) => {
     const umbrellas = createUmbrellas();
     document.querySelector("body").classList.add("overflow-hidden");
     useEffect(function(){
+        const text = document.querySelector("#homeText");
+        text.animate([{
+        transform: "translateY(0px)"
+    },{
+        transform: "translateY(-2000px)"
+    }], {delay:4000, duration: 1000, easing: "ease-in-out", fill:"forwards"});
+        const umbrellaList = document.querySelectorAll(".umbrella");
+        umbrellaList.forEach(umbrella => {
+            let isneg;
+        if(Math.random() > 0.25){
+            isneg = 1;                
+        }
+        else{
+            isneg = -1
+        }
+        const x = Math.floor(Math.random()*isneg*1200);
+        const umbrellaAnimate = [
+            {transform:`translate(${x}px, 1500px)`},
+            {transform:`translate(${x}px, -2000px)`}
+        ]
+        const umbrellaTiming = {
+            duration: 5000,
+            delay: 5000,
+            easing: `cubic-bezier(${Math.random().toFixed(3)}, ${Math.random().toFixed(3)}, ${Math.random().toFixed(3)}, 1)`,
+            fill: "forwards"
+        }
+        umbrella.animate(umbrellaAnimate, umbrellaTiming);
+        })
         const logo = document.querySelector("#homeLogo")
         logo.addEventListener("animationend", function(){
-            const newHeight = document.querySelectorAll(".umbrella");
-            newHeight.forEach((val, index) => {
-                val.style.transition = umbrellas[index].props.transition;
-                val.setAttribute("transform", umbrellas[index].props.end);
-            })
             setTimeout(function(){
                     const rect = document.querySelector("#canvas");
                     rect.classList.add("remove")

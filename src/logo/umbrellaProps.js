@@ -13,16 +13,15 @@ const createUmbrellas = ()=>{
             isneg = -1
         }
         const x = Math.floor(Math.random()*isneg*1200)
-        const beginning = `translate(${x}, 1500)`;
-        const end = `translate(${x}, -1500)`;
         const color = colors[Math.floor(Math.random()*6)];
         const cubic = `cubic-bezier(${Math.random().toFixed(3)}, ${Math.random().toFixed(3)}, ${Math.random().toFixed(3)}, 1)`;
         const className = "umbrella none";
         const transition =  `transform 5s ${cubic}`;
         const id = `umbrella-${i}`
         const key = i;
-        const strokeWidth = "35"
-        const newprops = {beginning, end, color, className, transition, id, key, strokeWidth};
+        const strokeWidth = "35";
+        const transform = "translate(0, 1500)";
+        const newprops = {transform, color, className, transition, id, key, strokeWidth};
         umbrellas.push(<Umbrella {...newprops}/>)
     }
     return umbrellas;

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Umbrella = (props) => {
     return (
-        <g id={props.id} className={props.className} transform={props.beginning}>
+        <g id={props.id} className={props.className} transform={props.transform}>
                 <path className="logo_handle" fill="none" stroke={props.handle? props.handle: "brown"} strokeWidth="10" d="M 250.00,195.00
                     C 250.00,195.00 250.00,347.00 250.00,347.00" />
                 <path className="logo_back" fill={props.color.back} d="M 1.00,249.00
