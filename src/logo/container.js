@@ -9,9 +9,9 @@ const Container = (props) => {
     useEffect(function(){
         const text = document.querySelector("#homeText");
         text.animate([{
-        transform: "translateY(0px)"
+        transform: "translate(0px, 0px)"
     },{
-        transform: "translateY(-2000px)"
+        transform: "translate(0px, -2000px)"
     }], {delay:4000, duration: 1000, easing: "ease-in-out", fill:"forwards"});
         const umbrellaList = document.querySelectorAll(".umbrella");
         umbrellaList.forEach(umbrella => {
