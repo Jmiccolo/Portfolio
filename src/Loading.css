@@ -11,13 +11,9 @@
     width: 100vw;
     height: 100vh;
 }
-#homeLogo{
-    transform: translate(120px, 1500px);
-    animation: riseUpMain 4s 1s ease-in-out forwards;
-}
 #canvas{
     transform-origin: 0 0;
-    transition: transform 4s ease-in-out, opacity 1s 4s ease-out;
+    transition: transform 3s 1s ease-in-out, opacity 2s 4s ease-out;
 }
 .remove {
     transform: translateY(-4000px);
@@ -37,14 +33,6 @@ svg text{
         transform: translateY(0px);
     }
     75%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-2000px);
-    }
-}
-@keyframes riseUp{
-    0%{
         transform: translateY(0px);
     }
     100%{
