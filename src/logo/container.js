@@ -8,28 +8,27 @@ import animateUmbrella from "./umbrellaAnimate";
 
 const Container = (props) => {
     const umbrellas = createUmbrellas();
-    const clearAnimations = setTimeout(function(){
+    document.querySelector("body").classList.add("overflow-hidden");
+    useEffect(function(){
+        const addRemove = setTimeout(function(){
+        document.querySelector('#canvas').classList.add("remove");
+    }, 5000);
+        const clearAnimations = setTimeout(function(){
                 document.querySelector("body").classList.remove("overflow-hidden");
                 window.localStorage.FirstTime = true;
                 document.querySelector("#mainLogo").remove();
                 setTimeout(function(){
                     props.setLoaded(true);
                 }, 100)
-            }, 4500)
-    document.querySelector("body").classList.add("overflow-hidden");
-    useEffect(function(){
+            }, 9000);
         animateLogo();
         animateText();
         animateUmbrella();
-        const logo = document.querySelector("#homeLogo").getAnimations()[0];
-        if(logo){logo.onfinish = function(){
-            document.querySelector('#canvas').classList.add("remove");
-            clearAnimations();
-        }
-        }
         document.querySelector("#mainLogo").addEventListener("click", function(){
             window.localStorage.FirstTime = true;
             clearTimeout(clearAnimations);
+            clearTimeout(addRemove);
+            document.querySelector("body").classList.remove("overflow-hidden");
             setTimeout(function(){
                 props.setLoaded(true);
             }, 100);

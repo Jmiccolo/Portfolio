@@ -250,6 +250,9 @@ main {
   .nav-links-active li{
     transform:scaleY(1);
   }
+  .nav-menu{
+    padding-right: .5em;
+  }
   .nav-menu h4{
     display: block;
   }
