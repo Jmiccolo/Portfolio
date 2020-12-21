@@ -7,6 +7,6 @@ Visit it at https://www.joshmiccolo.com
 
 ###Todo
  
-- [] Meta Description
-- [] Alt text for pictures/SVGS
-- [] Fix Resume page to be more interactive
+- [ ] Meta Description
+- [ ] Alt text for pictures/SVGS
+- [ ] Fix Resume page to be more interactive
