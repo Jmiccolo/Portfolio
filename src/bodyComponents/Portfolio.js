@@ -14,7 +14,7 @@ const Portfolio = () => {
             Title: "Daily Affirmations",
             Description:<p>Using <a href='https://github.com/annthurium' target='__blank'>annthurium's</a> Affirmation API to create a small application to remind yourself of the good work you have done and that you are good enough</p>,
             Website:"https://miccolo-daily-affirmations.herokuapp.com/",
-            Github:"https://github.com/Jmiccolo/DailyAffirmations.PNG",
+            Github:"https://github.com/Jmiccolo/DailyAffirmations",
             picture:"https://lh3.googleusercontent.com/hvqga1obAmu3UngiLfOWL30w_hL_zwyG-u0O23iNQRYTw9hNYp8EKkIXAJwAXDsZZrfNVslix_F0Swt5WPeTKRup-b24RLZ-WnE6EW6k-oPV6Yn7vU_o8DxQ2MJnfrMGQNu2_QU5gw=w600-h315-p-k",
             Languages: ["html5", "css3-alt", "js", "node-js"]
         },

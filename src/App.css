@@ -83,6 +83,9 @@ header nav ul a:hover .links{
   align-items: flex-end;
   padding: 0 0.5em;
 }
+.nav-menu h4{
+  display: none;
+}
 #nav-button{
   display: none;
   align-self: flex-end;
@@ -246,6 +249,9 @@ main {
   }
   .nav-links-active li{
     transform:scaleY(1);
+  }
+  .nav-menu h4{
+    display: block;
   }
   #nav-button{
     display: block;

@@ -8,6 +8,14 @@ import animateUmbrella from "./umbrellaAnimate";
 
 const Container = (props) => {
     const umbrellas = createUmbrellas();
+    const clearAnimations = setTimeout(function(){
+                document.querySelector("body").classList.remove("overflow-hidden");
+                window.localStorage.FirstTime = true;
+                document.querySelector("#mainLogo").remove();
+                setTimeout(function(){
+                    props.setLoaded(true);
+                }, 100)
+            }, 4500)
     document.querySelector("body").classList.add("overflow-hidden");
     useEffect(function(){
         animateLogo();
@@ -16,15 +24,15 @@ const Container = (props) => {
         const logo = document.querySelector("#homeLogo").getAnimations()[0];
         logo.onfinish = function(){
             document.querySelector('#canvas').classList.add("remove");
-            setTimeout(function(){
-                document.querySelector("body").classList.remove("overflow-hidden");
-                window.localStorage.FirstTime = true;
-                document.querySelector("#mainLogo").remove();
-                setTimeout(function(){
-                    props.setLoaded(true);
-                }, 100)
-            }, 4500)
+            clearAnimations();
         }
+        document.querySelector("#mainLogo").addEventListener("click", function(){
+            window.localStorage.FirstTime = true;
+            clearTimeout(clearAnimations);
+            setTimeout(function(){
+                props.setLoaded(true);
+            }, 100);
+        })
     });
     return (
         <svg id="mainLogo" xmlns="http://www.w3.org/2000/svg" fill="none" width="100vw" height="100vh" viewBox="0 0 1000 1000">
