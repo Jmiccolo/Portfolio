@@ -22,9 +22,10 @@ const Container = (props) => {
         animateText();
         animateUmbrella();
         const logo = document.querySelector("#homeLogo").getAnimations()[0];
-        logo.onfinish = function(){
+        if(logo){logo.onfinish = function(){
             document.querySelector('#canvas').classList.add("remove");
             clearAnimations();
+        }
         }
         document.querySelector("#mainLogo").addEventListener("click", function(){
             window.localStorage.FirstTime = true;
