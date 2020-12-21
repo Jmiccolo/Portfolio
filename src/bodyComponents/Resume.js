@@ -51,17 +51,17 @@ const Resume = () => {
             <h1 className="Body-Header" style={{width:"100%"}}>Where I Learned</h1>
             <div className="resume-list">
             <h3>Colt Steele's Web Development Boot Camp 2020</h3>
-            <p>Introduction to HTML5, Semantic HTML, CSS3, Javascript, ES6, Boostrap4, Express, EJS, MongoDB</p>
+            <p>Introduction to HTML5, Semantic HTML, CSS3, Javascript, ES6, Boostrap4, Express, EJS and MongoDB</p>
             </div>
             
             <div className="resume-list">
             <h3>Colt Steele - The Advanced Web Developer Bootcamp</h3>
-            <p>Advanced study of HTML, CSS, and Javascript, React, and D3</p>
+            <p>Advanced study of HTML, CSS, and Javascript, React and D3</p>
             </div>
             
             <div className="resume-list">
             <h3>Harvard's CS50x</h3>
-            <p>Intro to Computer Science, Python, C, Flask</p>
+            <p>Intro to Computer Science, Python, C and Flask</p>
             </div>
             </section>
 

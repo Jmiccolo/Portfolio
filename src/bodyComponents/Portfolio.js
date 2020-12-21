@@ -4,7 +4,7 @@ const Portfolio = () => {
             const Websites = [
         {
             Title: "DND For You And Me",
-            Description:<p>An application built to ease users into the creation and playing of a Dungeons and Dragons campaign. Built with EJS Templating, Express, and MongoDB with authentication by Passport and sessions. Soon to link with <a href="www.dnd5eapi.co">D&amp;D 5th Edition API</a></p>,
+            Description:<p>An application built to ease users into the creation and playing of a Dungeons and Dragons campaign. Built with EJS Templating, Express and MongoDB with authentication by Passport and sessions. Soon to link with <a href="www.dnd5eapi.co">D&amp;D 5th Edition API</a></p>,
             Website:"https://dndforyouandme.herokuapp.com/",
             Github:"https://github.com/Jmiccolo/DnDForYouAndMe",
             picture:"https://lh3.googleusercontent.com/-uNYCHsBAaNLDfRdZf2AHsXLiv15M8fUrby05SVT-enjD5QThY7-Q8_krV3LFaGXbQwUxAGTtBflFka3Si0r_5kz-uUMf-4PzKhLElYVzm5YWJRoHOvNJ8HgfR_1xYz8zAz9G0Lj0g=w600-h315-p-k",
