@@ -1,32 +1,43 @@
 import React, {useState} from 'react';
-import emailjs from 'emailjs-com';
+import axios from "axios";
+
+
 
 const Contact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [response, setResponse] = useState("");
+    function clearForm(){
+        setName("");
+        setEmail("");
+        setMessage("");
+        }
 
     function handleSubmit (e) {
         e.preventDefault()
-        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, e.target, process.env.REACT_APP_EMAILJS_USER)
-            .then((result) => {
-                setName("");
-                setEmail("");
-                setMessage("");
-                const success = document.createElement("div");
-                success.innerText = "Thank you for your Email";
-                success.style.color = "blue";
-                success.style.backgroundColor = "white";
-                document.querySelector(".form-container").prepend(success);     
-            },)
-            .catch((error) => {const failure = document.createElement("div");
-                failure.innerText = "Something went wrong";
-                failure.style.color = "red";
-                failure.style.fontSize="30px";
-                document.querySelector(".form-container").prepend(failure);}); 
+        const data = JSON.stringify({"from_name":name, "reply_to":email, "message":message});
+        axios({url: "https://0duco5f1l2.execute-api.us-east-1.amazonaws.com/default",
+        method: 'POST', data:data, headers:{"Content-Type":"application/json"}
+        })
+            .then(res=>{
+                if(res.status === 200){
+                    setResponse({color:"blue", text:`Thank you for your Email ${name}`});
+                    clearForm();
+                }
+                else{
+                    setResponse({color:"red", text:"Sorry, something went wrong"});
+                    clearForm();
+                }
+            })
+            .catch(err=>{
+                setResponse({color:"red", text:"Sorry, something went wrong"});
+                clearForm();
+            })
     }
     return (
         <main className="form-container">
+        {response ? <h3 style={{color:response.color}}>{response.text}</h3> : null}
             <h2 className="Body-Header">Contact Me</h2>
             <form id="contact" onSubmit={handleSubmit}>
                 <label htmlFor="from_name">Name</label>
