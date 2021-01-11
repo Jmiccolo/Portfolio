@@ -52,7 +52,7 @@ const Portfolio = () => {
                </div> 
             <button className="min-project" onClick={minToggleModal}>Info</button>
             <a className="Websites" href={val.Website} target="_blank" rel="noopener noreferrer">Website</a>
-            <a className="Githubs" href={val.Github} target="_blank" rel="noopener noreferrer"><span className="fab fa-github"></span>Github Repo</a>
+            <a className="Githubs" href={val.Github} target="_blank" rel="noopener noreferrer"><span className="fab fa-github"></span>Github</a>
             <div onClick={minToggleModal} className="modal">{val.Description}</div>
         </div>
         )
