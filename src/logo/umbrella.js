@@ -4,7 +4,7 @@ const Umbrella = (props) => {
     return (
         <g id={props.id} className={props.className} transform={props.transform}>
                 <path className="logo_handle" fill="none" stroke={props.handle? props.handle: "brown"} strokeWidth="10" d="M 250.00,195.00
-                    C 250.00,195.00 250.00,347.00 250.00,347.00" />
+                    C 250.00,195.00 250.00,347.00 250.00,347.00" strokeLinecap="rounded" strokeLinejoin="round"/>
                 <path className="logo_back" fill={props.color.back} d="M 1.00,249.00
                     C 1.00,221.71 5.68,195.86 14.33,170.00
                         21.73,147.90 33.46,124.85 47.15,106.00

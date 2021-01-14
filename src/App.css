@@ -65,7 +65,6 @@ header nav ul a {
   align-items: center;
 }
 main{
-  padding: 0 .25em 1em;
   box-sizing: border-box;
 }
 .links{
@@ -92,6 +91,7 @@ header nav ul a:hover .links{
 }
 main {
   background-color: var(--primary-color);
+  padding: 0 100px;
 }
 .Intro{
   width: 100%;
@@ -99,6 +99,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 25px 0px;
 }
 .Intro-image {
   width: 50%;
@@ -111,9 +112,9 @@ main {
   border-radius: 50%;
   margin-left: 1em;
 }
-.HELP{
+.Intro-text{
   font-family: "Work Sans", sans-serif;
-  font-size: 4vw;
+  font-size: 28px;
   width: 50%;
   color: white;
   text-align: center;
@@ -121,15 +122,15 @@ main {
 .section-title{
   width: 100%;
   color: white;
-  font-size: 40px;
+  font-size: 28px;
   text-align: center;
 }
 .section{
   display: flex;
-  box-sizing: border-box;
   width: 100%;
   align-items: center;
   justify-content: center;
+  padding: 50px 0;
 }
 
 .section-image{
@@ -234,9 +235,7 @@ main {
     }
   .nav-links li{
     transform: scaleY(0);
-  }
-  .nav-links li a{
-    font-size: 4vw;
+    font-size: 2.8vw;
   }
   .nav-links li a .links{
     transform: translate(0, -200%);
@@ -370,7 +369,7 @@ main h1{
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 50px;
+  font-size: 35px;
   color: white;
   text-decoration: underline;
 }

@@ -3,11 +3,6 @@ import React from 'react';
 const Before = () => {
     return (
         <svg className="section-image" fill="none" viewBox="0 0 3000 2000">
-                <defs>
-                        <style>
-                            @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-                        </style>
-                </defs>
                     <rect width="3000"  height="500" fill="lightgrey" x="0" y="1000" rx="50"/>
                     <rect id="loadBar" width="0" height="400" fill="green" x="100" y="1050"/>
                     <g id="Performance">
@@ -57,8 +52,6 @@ const Before = () => {
                 </g>
                     <text id="X" stroke="red" fill="red" x="2500" y="1450">X</text>
                     <text id="check" stroke="green" fill="green" x="2500" y="1450">&#x2713;</text>
-                    <text id="before" fontFamily="Work Sans" fill="black" stroke="black" x="1300" y="250">Before</text>
-                    <text id="after" fill="black" fontFamily="Work Sans" stroke="black" x="1300" y="250">After</text>
 </svg>
     );
 };

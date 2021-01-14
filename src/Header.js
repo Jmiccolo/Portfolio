@@ -10,7 +10,7 @@ const Header = () => {
         links.push(<li key={i} className="nav-link">
                     <Link onClick={()=>{document.querySelector("#nav-button").classList.remove("nav-button-active");
                 document.querySelector(".nav-links").classList.remove("nav-links-active")}}to={`/${link.title.replace(" ", "")}`}>
-                        <svg className="links" width="50px" height="50px" stroke="black" strokeWidth="1px" fill="none" viewBox="0 0 500 500">
+                        <svg className="links" width="4vw" height="4vw" stroke="black" strokeWidth="1px" fill="none" viewBox="0 0 500 500">
                                 <Umbrella strokeWidth="15" id={link.title} color={link.color}/>   
                         </svg>
                             {link.title}

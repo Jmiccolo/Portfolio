@@ -10,11 +10,10 @@ const Landing = (props) => {
         <main>
             <section className="Intro">
                 <div className="Intro-image"></div>
-                <blockquote className="HELP">
+                <blockquote className="Intro-text">
                     Hi, my name is Josh. I am a self-taught Web Developer working to help you reach your audience with unique, performative websites.
                 </blockquote>
             </section>
-            <h2 className="Body-Header"><u>What do I do?</u></h2>
            <section className="Unique section">
                 <div className="section-text">
                 <h2>Creative Websites</h2>
