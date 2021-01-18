@@ -5,7 +5,7 @@ const Portfolio = () => {
         {
             Title: <h3>Eloise Fine<br/>Dining Restaurant</h3>,
             Description:<p>Fine Dining Restaurant Website built in Nextjs with React and served on Vercel. Built with custom Calendar and Reservation Application and Contact Form using AWS Lambda Functions and API Gateway. </p>,
-            Website:"https://fine-dining-owk2nuky7.vercel.app/",
+            Website:"https://fine-dining.vercel.app/",
             Github:"https://github.com/Jmiccolo/fine_dining",
             picture:"https://lh3.googleusercontent.com/pw/ACtC-3eTgNq4ORt6NlsbrlWdlKlnTvGMOySzBtRihnWQ5R0B3-El1zq9w3pIRJ8lcvdzRMoq2M5ZTHmPv5eT6Pab25n9jG4vBVrahIb2ChmTh49rLPUrOABSkEcnW8yLryakwDcslk8FmfEQMBZELiNyGftF=w1080-h575-no?authuser=0",
             Languages: ["html5", "css3-alt", "js", "react"]
@@ -59,7 +59,7 @@ const Portfolio = () => {
     });
     return (
         <main>
-                 <h1 className="Body-Header">Projects</h1>
+        <h1 className="Body-Header">Projects</h1>
         <section className="section Projects">
             {ProjectBlocks}
         </section>
