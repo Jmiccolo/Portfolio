@@ -91,7 +91,7 @@ header nav ul a:hover .links{
 }
 main {
   background-color: var(--primary-color);
-  padding: 0 100px;
+  padding: 0 5%;
 }
 .Intro{
   width: 100%;
