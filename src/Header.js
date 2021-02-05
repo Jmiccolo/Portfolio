@@ -9,7 +9,7 @@ const Header = () => {
     for(let [i, link] of linkgroups.entries()){
         links.push(<li key={i} className="nav-link">
                     <Link onClick={()=>{document.querySelector("#nav-button").classList.remove("nav-button-active");
-                document.querySelector(".nav-links").classList.remove("nav-links-active")}}to={`/${link.title.replace(" ", "")}`}>
+                document.querySelector(".nav-links").classList.remove("nav-links-active")}} to={`/${link.title.replace(" ", "")}`}>
                         <svg className="links" width="4vw" height="4vw" stroke="black" strokeWidth="1px" fill="none" viewBox="0 0 500 500">
                                 <Umbrella strokeWidth="15" id={link.title} color={link.color}/>   
                         </svg>
@@ -22,7 +22,7 @@ const Header = () => {
             <nav>
             <div className="nav-header">
             <a href="/" onClick={()=> {delete window.localStorage.FirstTime}}>
-                <svg className="links" width="200px" height="50px" stroke="black" strokeWidth="1px" fill="none" viewBox= "0 0 2000 500">
+                <svg className="logo" width="200px" height="50px" stroke="black" strokeWidth="1px" fill="none" viewBox= "0 0 2000 500">
                     <Umbrella strokeWidth="35" id="home" color={{front:"#5f9eae",back:"#afeeff"}} />
                     <Text fontSize="15em" textLength="1500"/>
                 </svg>
